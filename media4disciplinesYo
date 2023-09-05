@@ -1,0 +1,9 @@
+# Calcular media de 4 disciplinas e dizer se está aprovado ou reprovado
+
+matematica, portugues, ingles, geografia = float(input("Introduza as notas de Matemática, Português, Inglês e Geografia: ")), float(input()), float(input()), float(input())
+media = (matematica + portugues + ingles + geografia) / 4
+print("A média é: ", media)
+if media < 9.5:
+    print("reprovado")
+else:
+    print("aprovado")
