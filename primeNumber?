@@ -1,0 +1,12 @@
+#Determinar se um número é primo
+num=int(input("Introduza um número: "))
+if num>1:
+    for i in range(2,num):
+        if num%i==0:
+            print(num,"não é primo.")
+            print(num, " é divisivel por ",i )
+            break
+    else:
+        print(num," é primo.")
+else:
+    print(num,"não é primo")
