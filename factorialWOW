@@ -1,0 +1,4 @@
+#Fazer o fatorial de um numero
+from math import *
+num = int(input("Introduza um numero: "))
+print("O valor do fatorial de ",num, "é: ", factorial(num))
