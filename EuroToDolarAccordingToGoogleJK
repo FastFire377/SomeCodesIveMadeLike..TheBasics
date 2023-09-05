@@ -1,0 +1,3 @@
+# Pedir euros e transaccionar para dolares com uma taxa de 1,17
+euro = float(input("Introduza quantos euros:"))
+print(euro, "euros são", euro*1.17, "dolares")
