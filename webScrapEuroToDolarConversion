@@ -1,0 +1,14 @@
+from urllib.request import urlopen
+url = "https://www.xe.com/pt/currencyconverter/convert/?Amount=1&From=EUR&To=USD"
+page = urlopen(url)
+html_bytes = page.read()
+html = html_bytes.decode("utf-8")
+
+euro_to_dolar_index = html.find("result__BigRate-sc-1bsijpp-1 iGrAod")
+start_index = euro_to_dolar_index + len("result__BigRate-sc-1bsijpp-1 iGrAod") + 2
+euro_to_dolar = html[start_index:start_index + 4]
+print("1€ is " + euro_to_dolar + "$")
+
+euro_to_dolar = float(euro_to_dolar.replace(",","."))
+euros = float(input("Euros to dolar: "))
+print(euros, "€ is", euros*euro_to_dolar, "$")
